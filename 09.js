@@ -26,20 +26,25 @@ function filtrar(funcion) {
   // }) => [{price: 100, name:'tv'}]
 
   
-Array.prototype.filtrar = function(funcion){
-    
+  Array.prototype.filtrar = function(funcion){ 
 
-  let newArray = [];
-  
-  for (const element of this) {
-    if(funcion(element)){
-        newArray.push(element);
-    }
-  }
-      
-  return newArray;  
+    // let newArray = [];
+    
+    // for (const element of this) {
+    //   if(funcion(element)){
+    //       newArray.push(element);
+    //   }
+    // } 
+    // return newArray;    
+    
+    /**
+    * Ideal usando filter
+    */
+    return this.filter(elemento => funcion(elemento));
     
   };
+
+
 }
 
 // No modifiques nada debajo de esta linea //
