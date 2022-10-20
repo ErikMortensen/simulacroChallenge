@@ -14,11 +14,16 @@ function buscarAmigo(amigos, nombre) {
   //  buscarAmigo(amigos, 'toni') debe devolver { nombre: 'toni', edad: 33 };
 
   // Tu código aca:
-  for(let i=0; i<amigos.length; i++){
-    if(amigos[i].nombre === nombre){
-      return amigos[i];
-    }
-  }
+  // for(let i=0; i<amigos.length; i++){
+  //   if(amigos[i].nombre === nombre){
+  //     return amigos[i];
+  //   }
+  // }
+
+  //Mejora_1
+  // return amigos.find(amigo => amigo.nombre === nombre);
+
+  return amigos.find(amigo => amigo.nombre.toLowerCase() === nombre.toLowerCase());
 }
 
 // No modifiques nada debajo de esta linea //
